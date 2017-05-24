@@ -6,7 +6,6 @@
     <hook src="cordova-prepare.js" type="after_prepare" />
     <content src="index.cordova.html" />
     <access origin="*" />
-    <allow-navigation href="*" />
     <icon src="node_modules/@musicociel/webapp/build/output/icon.png" />
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
