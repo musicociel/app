@@ -9,7 +9,7 @@
         "recursive-copy": "^2.0.6"
     },
     "dependencies": {
-        "@musicociel/webapp": "^0.0.4",
+        "@musicociel/webapp": "^0.0.6",
         "cordova-android": "^6.2.3",
         "cordova-plugin-crosswalk-webview": "^2.3.0",
         "cordova-plugin-file": "^4.3.3",
