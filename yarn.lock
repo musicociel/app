@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@musicociel/webapp@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@musicociel/webapp/-/webapp-0.0.6.tgz#3ba46da5428adaff8a5bda84b398cb0ed2bd5d9e"
+"@musicociel/webapp@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@musicociel/webapp/-/webapp-0.0.7.tgz#198eeb425077f9dc81d84a489652112da3992744"
 
 JSONStream@^1.0.3:
   version "1.3.1"
