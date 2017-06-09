@@ -6,7 +6,8 @@
     <hook src="cordova-prepare.js" type="after_prepare" />
     <content src="index.cordova.html" />
     <access origin="*" />
-    <icon src="node_modules/@musicociel/webapp/build/output/icon.png" />
+    <icon height="512" src="node_modules/@musicociel/webapp/build/output/icon512.png" width="512" />
+    <icon height="144" src="node_modules/@musicociel/webapp/build/output/icon144.png" width="144" />
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
         <variable name="XWALK_VERSION" value="23+" />
