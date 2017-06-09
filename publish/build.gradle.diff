@@ -1,0 +1,45 @@
+--- build.gradle	2017-06-10 18:19:15.004080131 +0200
++++ build.gradle	2017-06-10 18:18:13.310552325 +0200
+@@ -18,6 +18,7 @@
+ */
+
+ apply plugin: 'com.android.application'
++apply plugin: 'com.github.triplet.play'
+
+ buildscript {
+     repositories {
+@@ -31,6 +32,7 @@
+     // and https://issues.apache.org/jira/browse/CB-8143
+     dependencies {
+         classpath 'com.android.tools.build:gradle:2.2.3'
++        classpath 'com.github.triplet.gradle:play-publisher:1.2.0'
+     }
+ }
+
+@@ -164,6 +167,12 @@
+         }
+     }
+
++    playAccountConfigs {
++        defaultAccountConfig {
++            jsonFile = file('../../publish/publisher.json')
++        }
++    }
++
+     defaultConfig {
+         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
+         applicationId privateHelpers.extractStringFromManifest("package")
+@@ -171,6 +180,7 @@
+         if (cdvMinSdkVersion != null) {
+             minSdkVersion cdvMinSdkVersion
+         }
++        playAccountConfig = playAccountConfigs.defaultAccountConfig
+     }
+
+     lintOptions {
+@@ -312,3 +323,5 @@
+ if (hasProperty('postBuildExtras')) {
+     postBuildExtras()
+ }
++
++cdvBuildRelease.dependsOn 'publishApkArmv7Release', 'publishApkX86Release'
