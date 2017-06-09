@@ -17,6 +17,9 @@
         "cordova-plugin-sqlite-2": "^1.0.4",
         "cordova-plugin-whitelist": "^1.3.2"
     },
+    "scripts": {
+        "cordova": "cordova"
+    },
     "cordova": {
         "platforms": [
             "android"

@@ -7,13 +7,13 @@ android:
   - build-tools-25.0.0
   - android-25
 install:
- - nvm install 7
- - curl -o- -L https://yarnpkg.com/install.sh | bash
- - export PATH="$HOME/.yarn/bin:$PATH"
- - yarn
+ - nvm install 8
+ - node --version
+ - npm --version
+ - npm install
 before_script:
- - yarn cordova prepare
- - yarn cordova compile android
+ - npm run cordova prepare
+ - npm run cordova compile android
 script: true
 jdk:
   - oraclejdk8
