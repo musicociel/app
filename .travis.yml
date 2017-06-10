@@ -1,19 +1,19 @@
 language: android
 android:
- components:
+  components:
   - tools
   - platform-tools
   - tools
   - build-tools-25.0.0
   - android-25
 install:
- - nvm install 8
- - node --version
- - npm --version
- - npm install
+- nvm install 8
+- node --version
+- npm --version
+- npm install
 before_script:
- - npm run cordova prepare
- - npm run cordova compile android
+- npm run cordova prepare
+- npm run cordova compile android
 script: true
 jdk:
-  - oraclejdk8
+- oraclejdk8
