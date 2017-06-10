@@ -42,4 +42,4 @@
      postBuildExtras()
  }
 +
-+cdvBuildRelease.dependsOn 'publishApkArmv7Release', 'publishApkX86Release'
++cdvBuildRelease.dependsOn 'publishRelease'

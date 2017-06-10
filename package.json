@@ -13,7 +13,6 @@
     "@musicociel/webapp": "^0.1.1",
     "cordova-android": "^6.2.3",
     "cordova-plugin-compat": "^1.1.0",
-    "cordova-plugin-crosswalk-webview": "^2.3.0",
     "cordova-plugin-file": "^4.3.3",
     "cordova-plugin-insomnia": "^4.3.0",
     "cordova-plugin-sqlite-2": "^1.0.4",
@@ -41,14 +40,7 @@
       "cordova-plugin-file": {},
       "cordova-plugin-sqlite-2": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-insomnia": {},
-      "cordova-plugin-crosswalk-webview": {
-        "XWALK_VERSION": "23+",
-        "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
-        "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
-        "XWALK_MODE": "embedded",
-        "XWALK_MULTIPLEAPK": "true"
-      }
+      "cordova-plugin-insomnia": {}
     }
   }
 }

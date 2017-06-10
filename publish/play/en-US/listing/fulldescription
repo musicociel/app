@@ -1,0 +1,8 @@
+Import your songs in the ChordPro or OpenSong format.
+Display song lyrics, hide/show guitar chords, transpose chords and display them in the Do/Re/Mi or C/D/E notation.
+Put songs in one or multiple libraries that can be enabled or disabled.
+Synchronize each song library with a server (running CouchDB or a compatible database).
+Create song lists.
+Connect multiple devices to a server to orchestrate the display of the same verse of the same song at the same time on all connected devices.
+
+This application is open-source (under the AGPL license). It is still in an early stage of development. Contributions are welcome on GitHub (https://github.com/musicociel/app).

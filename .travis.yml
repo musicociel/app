@@ -29,15 +29,4 @@ env:
   global:
   - secure: feWEl1kHdDlwY5IXr79TNylZVz3x35P97FELlaOMiB9GFiFRgtINxlMn6TdQTUFZG44eT9zkJXkZCNkw+yu2ujf4jVIOTDFf1IaCzP55C12tt+1/iaN5WRGOP4kPCu+KhwIF3hmievHjoyV8pd1/ukSsxt283J15h0D+NVbr69tWV531LKH5teF5epT/x/d5dDZ1DM1n0fmnqlImUO81P76aGnzPVSzUoRXvBzy4Uc3KbYrRmpVttxX5m+q7viGfvgGluXLEdK5uvsUyejIjSGseujkdkgp3rtE7qTysfWbxdUcWa/72j05vBX2M/PjEXz1ks/a78AxDScokQH9injd4AEpwyqv+iGRL7+hjarJfmKPuwUsS11KcfS97C2FvnAvtY8qDbX1s9mqpMn/D/yzGeEJlD9X3PtlxJhu2yHvIEvZurmvhE+lkBTeKmSQ34ctKdQ/SE/HPpRjbCYx1aLkTka8VrH0zb4tfhrVsuGgXPHp1Y96JfrZKMvT/lpb+ho1q5DK6Gr9tLx2r+gi+CwV0LqPPfx4/L5GCytAVzeu4noSSIjdCf+uTuPp7UpWQUxvhSaMHCl3kth+u8JmV6sgN4cBwUBbzqAlGrHfLxTsr4jutzUqrn9K9N4WCedkJxdzt1Ca+FcUJ3qs5YVpE/Er1vgGk3rZ7rzkdecPrcMw=
   - secure: MBXoQLEgkPJuFuf3GsQgs/SuSkX9v6i9oaKNS2HRWpnXQ+D/1vF+mJTfxChov7kZTMfFmRL9v36XGHhzSs++cDbej31UJUoObzpabr1FVHNiMZ3VkQaMrOctlKbYE3XX0tdUded4zQCGfH7oDxR7tbnp7fyeOrJT/XrPjASVyQ9tv9PCt8YjSOkB6/H4dzcE9Y6rzEBYlOk/zBWOUlqIMHMiYVUpIzZlxMCnKp1gBLVwblMhmQ4Lp5a/cfXay6D+PQwunLUyIUishE/GpWkSjgyV0/wrJlmOC7kzTXXeCS8iWiYLxQn/4H2Pwlyh1mP63k3AzSq+kbQ756DYBj2Ey2oCvN5G6+sxwxQWkKIuzwKs8qXc9yKes/0HnYVFGTiJa5mn2N0TanapX3/tIL9pcHbjKEsg1SUHG0DmJXCmukq+ajCxyAeWe2nUVZBzNv698rLfnLF83q7A/ZIBOD0r3MetkdmyzTvxn1voqdZWH1+10ATWDkt2JWgU5D1/k35dOem8tiZfZuX+Hekt8n4VW1L0VoyTl8ZUgIDbnRkJUJkEx8vMvnQwTg4HcBKbJEHxGwIq1B8YI8xA6Mkn6+Fp7K+WBAk5qS0HZasSzoY85XgbDz+mqkkKHMA8K6gJ+BHHxm39KSEaTn2q/Iu4mARVQQAOP8XGiDgrrNReeh/9O4k=
-before_deploy:
-- npm run semantic-release pre
-- openssl aes-256-cbc -K $encrypted_dfa60c7f1074_key -iv $encrypted_dfa60c7f1074_iv -in publish/.publish.tar.bz2.enc -out publish/.publish.tar.bz2 -d
-- tar -C publish -jxf publish/.publish.tar.bz2
-after_deploy: npm run semantic-release post
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: "./publish/publish.sh"
-  on:
-    repo: musicociel/app
-    branch: master
+after_success: ./publish/publish.sh

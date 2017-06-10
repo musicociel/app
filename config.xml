@@ -9,13 +9,6 @@
     <icon height="512" src="node_modules/@musicociel/webapp/build/output/icon512.png" width="512" />
     <icon height="144" src="node_modules/@musicociel/webapp/build/output/icon144.png" width="144" />
     <engine name="android" spec="^6.2.3" />
-    <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
-        <variable name="XWALK_VERSION" value="23+" />
-        <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+" />
-        <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
-        <variable name="XWALK_MODE" value="embedded" />
-        <variable name="XWALK_MULTIPLEAPK" value="true" />
-    </plugin>
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-insomnia" spec="^4.3.0" />
     <plugin name="cordova-plugin-sqlite-2" spec="^1.0.4" />
