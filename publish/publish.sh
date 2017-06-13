@@ -45,8 +45,8 @@ node publish/fdroidMetadata.js &&
 echoTask 'cp "$PWD/platforms/android/build/outputs/apk/android-release.apk" "publish/fdroid/repo/musicociel-$APK_VERSION.apk"' &&
 cp "$PWD/platforms/android/build/outputs/apk/android-release.apk" "publish/fdroid/repo/musicociel-$APK_VERSION.apk" &&
 
-echoTask 'cd "$FDROID_REPO" && "$FDROID_SERVER/usr/bin/fdroid" update' &&
-( cd "$FDROID_REPO" && "$FDROID_SERVER/usr/bin/fdroid" update ) &&
+echoTask 'cd "$FDROID_REPO" && "$FDROID_SERVER/usr/local/bin/fdroid" update' &&
+( cd "$FDROID_REPO" && "$FDROID_SERVER/usr/local/bin/fdroid" update ) &&
 
 echoTask 'cd "$FDROID_REPO" && git config user.name "Release Bot" && git config user.email "divde@musicociel.fr"' &&
 ( cd "$FDROID_REPO" && git config user.name "Release Bot" && git config user.email "divde@musicociel.fr" ) &&
