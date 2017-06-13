@@ -1,3 +1,8 @@
 /node_modules
 /platforms
 /plugins
+/publish/fdroid
+/publish/fdroidserver
+/publish/.publish.tar.bz2
+/publish/keystore.jks
+/publish/publisher.json
