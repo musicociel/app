@@ -45,6 +45,9 @@ node publish/fdroidMetadata.js &&
 echoTask 'cp "$PWD/platforms/android/build/outputs/apk/android-release.apk" "publish/fdroid/repo/musicociel-$APK_VERSION.apk"' &&
 cp "$PWD/platforms/android/build/outputs/apk/android-release.apk" "publish/fdroid/repo/musicociel-$APK_VERSION.apk" &&
 
+echoTask 'npm publish' &&
+npm publish &&
+
 echoTask 'cd "$FDROID_REPO" && "$FDROID_SERVER/usr/local/bin/fdroid" update' &&
 ( cd "$FDROID_REPO" && "$FDROID_SERVER/usr/local/bin/fdroid" update ) &&
 
@@ -56,9 +59,6 @@ echoTask 'cd "$FDROID_REPO" && git add -A && git commit -m "Version $APK_VERSION
 
 echoTask 'cd "$FDROID_REPO" && git push origin master' &&
 ( cd "$FDROID_REPO" && git push origin master &> /dev/null ) &&
-
-echoTask 'npm publish' &&
-npm publish &&
 
 echoTask 'npm run semantic-release post' &&
 npm run semantic-release post &&

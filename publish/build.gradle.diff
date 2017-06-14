@@ -28,7 +28,7 @@
 +
      defaultConfig {
 -        versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
-+        versionCode cdvVersionCode ?: (new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode")) * 10 + 4)
++        versionCode cdvVersionCode ?: (1805 + new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode")))
          applicationId privateHelpers.extractStringFromManifest("package")
 
          if (cdvMinSdkVersion != null) {
