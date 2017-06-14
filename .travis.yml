@@ -1,3 +1,5 @@
+dist: trusty
+sudo: false
 language: android
 android:
   components:
@@ -23,8 +25,6 @@ cache:
   - node_modules
   - "$HOME/.gradle/caches/"
   - "$HOME/.gradle/wrapper/"
-jdk:
-- oraclejdk8
 env:
   global:
   - secure: feWEl1kHdDlwY5IXr79TNylZVz3x35P97FELlaOMiB9GFiFRgtINxlMn6TdQTUFZG44eT9zkJXkZCNkw+yu2ujf4jVIOTDFf1IaCzP55C12tt+1/iaN5WRGOP4kPCu+KhwIF3hmievHjoyV8pd1/ukSsxt283J15h0D+NVbr69tWV531LKH5teF5epT/x/d5dDZ1DM1n0fmnqlImUO81P76aGnzPVSzUoRXvBzy4Uc3KbYrRmpVttxX5m+q7viGfvgGluXLEdK5uvsUyejIjSGseujkdkgp3rtE7qTysfWbxdUcWa/72j05vBX2M/PjEXz1ks/a78AxDScokQH9injd4AEpwyqv+iGRL7+hjarJfmKPuwUsS11KcfS97C2FvnAvtY8qDbX1s9mqpMn/D/yzGeEJlD9X3PtlxJhu2yHvIEvZurmvhE+lkBTeKmSQ34ctKdQ/SE/HPpRjbCYx1aLkTka8VrH0zb4tfhrVsuGgXPHp1Y96JfrZKMvT/lpb+ho1q5DK6Gr9tLx2r+gi+CwV0LqPPfx4/L5GCytAVzeu4noSSIjdCf+uTuPp7UpWQUxvhSaMHCl3kth+u8JmV6sgN4cBwUBbzqAlGrHfLxTsr4jutzUqrn9K9N4WCedkJxdzt1Ca+FcUJ3qs5YVpE/Er1vgGk3rZ7rzkdecPrcMw=
