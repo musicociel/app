@@ -25,8 +25,8 @@ python --version &&
 echoTask 'pip --version' &&
 pip --version &&
 
-echoTask 'pip install fdroidserver' &&
-pip install fdroidserver &&
+echoTask 'sudo pip install fdroidserver' &&
+sudo pip install fdroidserver &&
 
 echoTask 'openssl aes-256-cbc -K $encrypted_2c96595a2e49_key -iv $encrypted_2c96595a2e49_iv -in publish/.publish.tar.bz2.enc -out publish/.publish.tar.bz2 -d' &&
 openssl aes-256-cbc -K $encrypted_2c96595a2e49_key -iv $encrypted_2c96595a2e49_iv -in publish/.publish.tar.bz2.enc -out publish/.publish.tar.bz2 -d &&
