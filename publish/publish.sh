@@ -23,7 +23,7 @@ echoTask 'python --version' &&
 python --version &&
 
 echoTask 'pip --version' &&
-pip --version
+pip --version &&
 
 echoTask 'pip install fdroidserver' &&
 pip install fdroidserver &&
