@@ -13,17 +13,19 @@ async function readProperty(...pathParts) {
 async function writeMetadata() {
   const language = await readProperty('defaultLanguage');
 
-  const metadata = {
-    "License": "AGPL",
-    "Web Site": await readProperty('contactWebsite'),
-    "Source Code": "https://github.com/musicociel/webapp",
-    "Issue Tracker": "https://github.com/musicociel/webapp/issues",
-    "Name": await readProperty(language, 'listing', 'title'),
-    "Summary": await readProperty(language, 'listing', 'shortdescription'),
-    "Description": await readProperty(language, 'listing', 'fulldescription')
-  };
+  const metadata =
+`License:AGPL
+Web Site:${await readProperty('contactWebsite')}
+Source Code:https://github.com/musicociel/webapp
+Issue Tracker:https://github.com/musicociel/webapp/issues
+Name:${await readProperty(language, 'listing', 'title')}
+Summary:${await readProperty(language, 'listing', 'shortdescription')}
+Description:
+${await readProperty(language, 'listing', 'fulldescription')}
+.
+`;
 
-  await writeFile(path.join(process.env.FDROID_REPO, 'metadata', 'fr.musicociel.json'), JSON.stringify(metadata));
+  await writeFile(path.join(process.env.FDROID_REPO, 'metadata', 'fr.musicociel.txt'), metadata);
 }
 
 writeMetadata().catch((error) => {
